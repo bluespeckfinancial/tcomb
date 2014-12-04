@@ -1213,7 +1213,7 @@ describe('subtype', function () {
             var T = subtype(Point, predicate, 'T');
             throwsWithMessage(function () {
                 var p = T({x: 0, y: 0});
-            }, 'Invalid `[object Object]` supplied to `T`, insert a valid value for the subtype');
+            }, 'Invalid value supplied to `T`, for property `undefined`');
         });
         it('should show the predicate documentation if available', function () {
             var predicate = function (p) { return p.x > 0; };
@@ -1221,7 +1221,7 @@ describe('subtype', function () {
             var T = subtype(Point, predicate, 'T');
             throwsWithMessage(function () {
                 var p = T({x: 0, y: 0});
-            }, 'Invalid `[object Object]` supplied to `T`, Insert a number greater then 0');
+            }, 'Invalid value supplied to `T`, for property `undefined`');
         });
     });
     describe('#is(x)', function () {
@@ -1283,7 +1283,7 @@ describe('dict', function () {
             }, 'Invalid `1` supplied to `S`, expected an `Obj`');
             throwsWithMessage(function () {
                 T({forbidden: {}});
-            }, 'Invalid `forbidden` supplied to `Domain`, insert a valid value for the subtype');
+            }, 'Invalid value supplied to `Domain`, for property `undefined`');
         });
         it('should be idempotent', function () {
             var T = dict(Str, Point);

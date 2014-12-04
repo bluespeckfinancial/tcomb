@@ -582,17 +582,17 @@
     // cache expected value
     var expected = predicate.__doc__ || format('insert a valid value for %s', predicate.name || 'the subtype');
 
-    function Subtype(value, mut) {
+    function Subtype(value, mut, key) {
 
       // DEBUG HINT: if the debugger stops here, you have used the `new` operator but it's forbidden
       blockNew(this, Subtype);
 
       // DEBUG HINT: if the debugger stops here, the value cannot be converted to the base type
-      var x = type(value, mut);
+      var x = type(value, mut, key);
 
       // DEBUG HINT: if the debugger stops here, the value is converted to the base type
       // but the predicate returns `false`
-      assert(predicate(x), 'Invalid `%s` supplied to `%s`, %s', value, name, expected);
+      assert(predicate(x), 'Invalid value supplied to `%s`, for property `%s`', name, key);
       return x;
     }
 
