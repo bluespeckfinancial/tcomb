@@ -1,12 +1,12 @@
 {
   "name": "tcomb",
   "main": "index.js",
-  "version": "0.3.6",
+  "version": "1.0.0",
   "homepage": "https://github.com/gcanti/tcomb",
   "authors": [
     "gcanti <giulio.canti@gmail.com>"
   ],
-  "description": "Runtime types checking for JavaScript ",
+  "description": "Type checking for JavaScript",
   "moduleType": [
     "amd",
     "globals",
@@ -26,15 +26,11 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "Gruntfile.js",
     "node_modules",
     "test",
-    "coverage",
-    "package.json",
-    "Gruntfile.js",
-    ".jshintrc",
-    "tcomb.sjs",
-    "CHANGELOG.md",
-    "LICENSE",
-    "README.md"
+    "docs",
+    "dev",
+    "definitions"
   ]
 }

@@ -1,3 +1,24 @@
+# v1.0.0
+
+- changed default name for `func` combinator
+- changed default name for `list` combinator
+- `t.update` is now overridable
+
+**BREAKING**
+
+- removed `options.onFail`, override `exports.fail` instead
+- removed `getKind`
+- removed `util` namespace
+- renamed `getName` to `getTypeName`
+
+# v0.4.0
+
+**BREAKING**
+
+- `t.irreducible` instead of `t.irriducible`, fix #77
+- Prevent illegal type definitions and make easy type analysis, fix #78
+- change default name for unnamed types, fix #79
+
 # v0.3.6
 
 - tuple, list and dicts don't freeze values if they are irriducibles, fix #76
