@@ -1048,7 +1048,7 @@ describe('enums', function () {
       eq(T('a'), 'a');
       throwsWithMessage(function () {
         T('b');
-      }, 'Invalid argument `value` = `b` supplied to enums type `T`, expected one of ["a"]');
+      }, 'Invalid value supplied to property `undefined` for enum type `T`, expected one of ["a"]');
     });
 
   });

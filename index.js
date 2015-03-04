@@ -380,9 +380,9 @@
     var keys = Object.keys(map); // cache enums
     name = name || keys.map(function (k) { return JSON.stringify(k); }).join(' | ');
 
-    function Enums(value) {
+    function Enums(value, mut, key) {
       blockNew(this, Enums);
-      assert(Enums.is(value), 'Invalid argument `value` = `%s` supplied to enums type `%s`, expected one of %j', value, name, keys);
+      assert(Enums.is(value), 'Invalid value supplied to property `%s` for enum type `%s`, expected one of %j', key, name, keys);
       return value;
     }
 
