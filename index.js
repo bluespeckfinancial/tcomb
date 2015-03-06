@@ -353,9 +353,9 @@
     assert(Nil.is(name) || Str.is(name), 'Invalid argument `name` = `%s` supplied to `maybe` combinator', name);
     name = name || ('?' + getTypeName(type));
 
-    function Maybe(value, mut) {
+    function Maybe(value, mut, key) {
       blockNew(this, Maybe);
-      return Nil.is(value) ? null : type(value, mut);
+      return Nil.is(value) ? null : type(value, mut, key);
     }
 
     Maybe.meta = {
