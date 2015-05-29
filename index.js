@@ -314,7 +314,7 @@
       assert(Func.is(Union.dispatch), 'Unimplemented `dispatch()` function for union type `%s`', name);
       var type = Union.dispatch(value);
       assert(Type.is(type), 'The `dispatch()` function of union type `%s` returns no type constructor', name);
-      return type(value, mut);
+      return type(value, mut, name);
     }
 
     Union.meta = {
